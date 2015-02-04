@@ -36,7 +36,7 @@
 include ./findcudalib.mk
 
 # Location of the CUDA Toolkit
-CUDA_PATH ?= "/usr/local/cuda-5.5"
+CUDA_PATH ?= "/usr/local/cuda"
 
 # internal flags
 NVCCFLAGS   := -m${OS_SIZE} -maxrregcount=16
@@ -100,9 +100,9 @@ ALL_LDFLAGS += $(EXTRA_NVCCLDFLAGS)
 ALL_LDFLAGS += $(addprefix -Xlinker ,$(EXTRA_LDFLAGS))
 
 # Common includes and paths for CUDA
-INCLUDES  := -I/usr/local/cuda-5.5/include
-INCLUDES  := -I/usr/local/cuda-5.5/samples/common/inc
-LIBRARIES := -L/usr/local/cuda-5.5/lib64
+INCLUDES  := -I/usr/local/cuda/include
+INCLUDES  := -I/usr/local/cuda/samples/common/inc
+LIBRARIES := -L/usr/local/cuda/lib64
 
 ################################################################################
 
